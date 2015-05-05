@@ -467,7 +467,7 @@ NSCache *_defaultMaskCache;
 - (CGSize)sizeThatFits:(CGSize)size;
 {
     const CGFloat scale = [UIScreen mainScreen].scale;
-    CGSize newSize = CGSizeMake(CGImageGetWidth(self.mask) / scale + MAX(fabsf(self.shadowOffset.width), 2.0f * self.outerGlowRadius), CGImageGetHeight(self.mask) / scale + MAX(fabsf(self.shadowOffset.height), 2.0f * self.outerGlowRadius));
+    CGSize newSize = CGSizeMake(CGImageGetWidth(self.mask) / scale + MAX(fabs(self.shadowOffset.width), 2.0f * self.outerGlowRadius), CGImageGetHeight(self.mask) / scale + MAX(fabs(self.shadowOffset.height), 2.0f * self.outerGlowRadius));
     return newSize;
 }
 
